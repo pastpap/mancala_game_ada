@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "cppdbg",
+            "request": "launch",
+            "name": "Ada: Debugger Launch",
+            "program": "${workspaceFolder}/${command:ada.getOrAskForProgram}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "externalConsole": false,
+            "preLaunchTask": "ada: Build current project",
+            "setupCommands": {
+                "description": "Enable pretty-printing for gdb",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+            }
+        }
+    ]
+   
+
+}
