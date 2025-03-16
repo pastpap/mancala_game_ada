@@ -1,7 +1,7 @@
 -- File: main.adb
 with Mancala_Game_Controller;
 
-procedure Main is
+procedure Main_Runner is
 begin
    Mancala_Game_Controller.Start_Server;
-end Main;
+end Main_Runner;

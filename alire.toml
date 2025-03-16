@@ -9,10 +9,17 @@ licenses = "Apache-2.0 WITH LLVM-exception"
 website = "papinologies.com"
 tags = []
 
-executables = ["main"]
-
-[[depends-on]]
-aunit = "^25.0.0"
+executables = ["main_runner"]
 
 [[depends-on]]
 aws = "^24.0.0"
+
+[[depends-on]]
+gnatcoll = "^24.0.0"
+
+[[depends-on]]
+libgpr = "^24.0.0"
+
+[[depends-on]]
+xmlada = "^24.0.0"
+

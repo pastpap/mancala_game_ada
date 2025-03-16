@@ -1,3 +1,5 @@
+-- mancala_game.ads
+
 package Mancala_Game is
 
    Board_Size      : constant Natural := 14;
@@ -12,8 +14,8 @@ package Mancala_Game is
 
    procedure Initialize (Game : out Mancala_Game_Type);
    procedure Reset_Board (Game : out Mancala_Game_Type);
-   function Play_Hand
-     (Game : in out Mancala_Game_Type; Position : Natural) return Boolean;
+   procedure Play_Hand
+     (Game : in out Mancala_Game_Type; Position : Natural);
    function Is_Finished (Game : Mancala_Game_Type) return Boolean;
    function Get_Winning_Player (Game : Mancala_Game_Type) return Integer;
    function Get_Winning_Player_Score (Game : Mancala_Game_Type) return Integer;

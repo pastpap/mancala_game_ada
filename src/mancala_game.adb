@@ -3,6 +3,8 @@ package body Mancala_Game is
    Player_One_ID : constant Natural := 0;
    Player_Two_ID : constant Natural := 1;
 
+
+
    procedure Initialize (Game : out Mancala_Game_Type) is
    begin
       Game.Board       := (others => Pebbles_Per_Pit);
@@ -16,8 +18,8 @@ package body Mancala_Game is
       Initialize (Game);
    end Reset_Board;
 
-   function Play_Hand
-     (Game : in out Mancala_Game_Type; Position : Natural) return Boolean
+   procedure Play_Hand
+     (Game : in out Mancala_Game_Type; Position : Natural)
    is
       Current_Position : Natural;
    begin
@@ -31,7 +33,6 @@ package body Mancala_Game is
          end if;
          Change_Turns (Game, Current_Position);
       end if;
-      return not Is_Finished (Game);
    end Play_Hand;
 
    function Is_Finished (Game : Mancala_Game_Type) return Boolean is
