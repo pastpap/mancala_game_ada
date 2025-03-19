@@ -1,7 +1,5 @@
 -- File: mancala_game_service.adb
 
-with Ada.Text_IO; use Ada.Text_IO;
-
 package body Mancala_Game_Service is
 
    Game : Mancala_Game_Type;
@@ -13,21 +11,14 @@ package body Mancala_Game_Service is
 
    function Map_Mancala_Game_To_State(Game : Mancala_Game_Type) return Mancala_Game_State is
       Winner_Id : Integer := Get_Winning_Player(Game);
-      Message : String(1..256) := "Game restarted"; --Ensure that the message is always set
    begin
-      Put_Line(Message);
-      Message := (if Winner_Id = 0 then "Player One" else "Player Two")
-               & " won with "
-               & Natural'Image((if Winner_Id = 0 then Get_Player_One_Total_Pebbles(Game) else Get_Player_Two_Total_Pebbles(Game)))
-               & " pebbles";
-      Put_Line(Message);
       return Mancala_Game_State'
         (Board               => Game.Board,
          Turn_Player         => Next_Player(Game),
          Is_Finished         => Is_Finished(Game),
          Winning_Player      => Winner_Id,
-         Winning_Player_Score => (if Winner_Id = 0 then Get_Player_One_Total_Pebbles(Game) else Get_Player_Two_Total_Pebbles(Game)),
-         Message             => Message);
+         Winning_Player_Score => (if Winner_Id = 0 then Get_Player_One_Total_Pebbles(Game) elsif Winner_Id =1 then Get_Player_Two_Total_Pebbles(Game) else -1),
+         Message             => [others => ' ']);
    end Map_Mancala_Game_To_State;
 
    function Get_Message_About_Winner_And_Score(State : Mancala_Game_State) return String is
@@ -46,20 +37,19 @@ package body Mancala_Game_Service is
          Mancala_Game.Play_Hand(Game, Position);
       exception 
          when others =>
-            State.Message := "Invalid move";
+            State.Message := [others => ' '];
             return;
       end;
       State := Map_Mancala_Game_To_State(Game);
       if Is_Finished(Game) then
          State.Message := Get_Message_About_Winner_And_Score(State);
       end if;
-   end Play_Hand;
+   end Play_Hand;   
 
-   
 
    function Reset_Game return Mancala_Game_State is
    begin
-      Reset_Board(Game);
+      Mancala_Game.Reset_Board(Game);
       return Map_Mancala_Game_To_State(Game);
    end Reset_Game;
 
