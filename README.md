@@ -106,7 +106,7 @@ client <--> HTTP
 
 @enduml
 ```
-![](https://www.plantuml.com/plantuml/svg/LP11ImCn48Nl-HMFzjn_85BMGnKi5dVrKZmCwn23qwHCalKW_dUpoVQm49ZXpPilmzl7H9hoHSpWaZ3GEszBxNbYnV7zPCwTXf_8-W6A6CMnJzW-E_kL3ihipPN6RxACJN_LieikXBJ1hm7AExzoJ7W8FcaGMI3ASOqelfvrSYFNUMmzjYzAtl8yFf8VIGW7kZIFPk65qKcUFO_3SCBTRdTV-GQrD6416jownPTb3NzxgcoRtVgygfI5-GlpPre8ZL4bisV_MJBy1m00)
+![](https://img.plantuml.biz/plantuml/svg/NP1D2W8n38NtFKLmrjv0n9-52ehYZBeG5t4CjLWxadPq8TxTj3E22eMKb_U-X0nyG0xrrQh214i0kN5QQavtObXiLse_ukhXYG-07afho0N8vaQVmuI9dBfXUK5Dq1cU47Pqb2XBjWDF1I1lloOVO5ovm9MrBOUZzaqHNyoPabBVDt_8benEKsmlq9Le4IPuRJnSovuDOsJhw9aMnGfwtMu_yKL8OvBG0aNxe1kVC7xWcrbYwzhyhHSL2SGHwgNQEoH6ajI0t4dE-0O0)
 ### Information Flow
 
 This is a sequence diagram representation of the flow of data durring the most common exchanges in the game modules.
@@ -142,4 +142,4 @@ database Database as db
 service <--> db
 @enduml
 ```
-![](https://www.plantuml.com/plantuml/svg/PP11ImCn44Rl-HKVxTbBZo9Igb05nTAjfzN3T7U8mMoo91CzYF_TR3Q2YwSCR-3D8zie52GDLfsCM0OEmVUf4-CT6fOqgdON_6Vay0gAwAnX9rW_6Fqc-y3ir4ZTEsd6gk7mOLbmuvsGSHnM-590-qYk8qlOFzyNXqvc8K0XLnVNk3kT3etw_gCSWt4QE--boeuSvml1MrkZmiIMndQACHsNVPndh9y2ESsB9XfuTYJBrR6pYHNcc4tkoc7J1ONopA0g5NwdWeibzzTVAgXeS8azo_G3_tURl3ooJjbTSbvS8oGSLKz2PugCspfCdVrPgSN93BRi-ZJO7m00)
+![](https://img.plantuml.biz/plantuml/svg/PP51JyCm38Nl-HNMTkQo8q9e3AI2DCIq5d4e7DpMAj6oT78SE23-EqxQWIfkrhFplMTd7GHPuj6PoeeZW1qFNMp53XvAadWozOQ7pq3y1XYWTPQym79h-tSfcCYR4xO7x0aM9V678u7RmGjQJxo0BmDGFw9lqI4Kpm-PqKSx0q1MhYwkuRwgTgNv_aFUT0Wlr412__Bs54OJ7foRSd7Ivj0wFR8jvNuOQrW-CVgUPh7mECvmrFr7niR5D9Fph3IQPaiEAcMZB4n8rSxmSKufki9qg2nb35n2eSVH8_plhRIvfpucTehpwaj1eM0w56mm4DoT2ytPDSRCB5LOa-_q4ty0)
