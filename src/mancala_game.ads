@@ -14,8 +14,7 @@ package Mancala_Game is
 
    procedure Initialize (Game : out Mancala_Game_Type);
    procedure Reset_Board (Game : out Mancala_Game_Type);
-   procedure Play_Hand
-     (Game : in out Mancala_Game_Type; Position : Natural);
+   procedure Play_Hand (Game : in out Mancala_Game_Type; Position : Natural);
    function Is_Finished (Game : Mancala_Game_Type) return Boolean;
    function Get_Winning_Player (Game : Mancala_Game_Type) return Integer;
    function Get_Winning_Player_Score (Game : Mancala_Game_Type) return Integer;
@@ -47,8 +46,9 @@ package Mancala_Game is
    procedure Try_Capturing_Enemy_Position
      (Game : in out Mancala_Game_Type; Current_Position : Natural);
    procedure Capture_From_Position_To_Mancala
-     (Game    : in out Mancala_Game_Type; Current_Position : Natural;
-      Mancala :        Natural);
+     (Game             : in out Mancala_Game_Type;
+      Current_Position : Natural;
+      Mancala          : Natural);
    procedure Change_Turns
      (Game : in out Mancala_Game_Type; Current_Position : Natural);
    function Is_Player_Own_Pit
